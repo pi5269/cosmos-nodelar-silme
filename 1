@@ -1,0 +1,8 @@
+cd $HOME
+sudo systemctl stop nodeismi+d
+sudo systemctl disable nodeismi+d
+sudo rm /etc/systemd/system/nodeismi+d.service
+sudo systemctl daemon-reload
+sudo rm -f /usr/local/bin/nodeismi+d
+sudo rm -f $(which nodeismi)
+sudo rm -rf $HOME/.nodeismi
